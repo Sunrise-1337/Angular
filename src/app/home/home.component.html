@@ -1,0 +1,10 @@
+<div>
+    <h1>Top animes</h1>
+    <div class="wrap">
+        <div class="wrap__anime" *ngFor="let item of response.data">
+            <img src={{item.images.jpg.image_url}} alt={{item.title}}>
+            <p *ngIf="item.score">{{item.score}}/10</p>
+            <h2>{{item.title}}</h2>
+        </div>
+    </div>
+</div>

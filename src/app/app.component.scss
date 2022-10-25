@@ -1,0 +1,21 @@
+header{
+    height: 63px;
+    background: #070720;
+
+    nav{
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 25px;
+    }
+}
+
+.header{
+    &__links{
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

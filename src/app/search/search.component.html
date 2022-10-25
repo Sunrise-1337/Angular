@@ -1,0 +1,19 @@
+<div class="wrap">
+    <input type="text" [(ngModel)]="value">
+    <button (click)="search()">Find</button>
+    <div class="result" *ngIf="searched">
+        <div *ngIf="response.data.length; else noResult">
+            <div class="result__anime"  *ngFor="let item of response.data">
+                <img src={{item.images.jpg.image_url}} alt={{item.title}}>
+                <div>
+                    <h2>{{item.title}}</h2>
+                    <p *ngIf="item.synopsis">{{item.synopsis}}</p>
+                </div>
+            </div>
+        </div>
+        <ng-template #noResult>
+            <h1>No result</h1>
+        </ng-template >
+    </div>
+
+</div>

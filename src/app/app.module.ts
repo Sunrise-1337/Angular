@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
-  {path : '', component : HomeComponent},
-  {path : 'search', component : SearchComponent}
+  {path : 'home', component : HomeComponent},
+  {path : 'search', component : SearchComponent},
+  {path : '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
